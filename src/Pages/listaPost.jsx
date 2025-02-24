@@ -1,5 +1,11 @@
 export default function listaPost() {
+
     return(
-        <h2> LISTA POST </h2>
+
+        <>
+            <h2> LISTA POST </h2>
+        </>
+
     );
+
 }
