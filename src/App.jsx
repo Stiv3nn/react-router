@@ -2,18 +2,19 @@
 
 //import './App.css'
 
-// importo degli elementi della libreria di gestione delle rotte
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+
+// importo degli elementi della libreria di gestione delle rotte
+import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom';
 
 // importo homePage
-import homePage from './Pages/homePage';
+import homePage from './pages/homePage';
 
 // importo Chi siamo
-import chiSiamo from './Pages/chiSiamo';
+import chiSiamo from './pages/chiSiamo';
 
 // importo Lista posts
-import listaPost from './Pages/listaPost';
+import listaPost from './pages/listaPost';
 
 
 
@@ -21,24 +22,23 @@ import listaPost from './Pages/listaPost';
 function App() {
   
   return (
-
+    
     <>
       <BrowserRouter>
+        <Router>
+          <Routes>
 
-        <Routes>
+            <Route path="/" element={<homePage />} /> 
 
-          <Route path='/' element={<homePage />} /> 
+            <Route path="/chiSiamo" element={<chiSiamo/>} />
+                
+            <Route path="/posts" element={<listaPost />} />
 
-          <Route path='/chi' element={<chiSiamo/>} />
-          
-          <Route path='/posts' element={<listaPost />} />
-
-        </Routes>
-
+          </Routes>
+        </Router>
       </BrowserRouter>
-
     </>
-
+    
   );
 
 }

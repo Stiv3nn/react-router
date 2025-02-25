@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 
-export default function Header() {
+export default function Navbar() {
 
     return(
 
@@ -13,17 +13,17 @@ export default function Header() {
                 </li>
 
                 <li>
-                    <NavLink to="/chiSiamo">Chi siamo</NavLink>
+                    <NavLink to="/chi">Chi siamo</NavLink>
                 </li>
 
                 <li>
-                    <NavLink to="/listaPost">Listaposts</NavLink>
+                    <NavLink to="/post">Listaposts</NavLink>
                 </li>
            
             </ul>
 
         </nav>
 
-    )
+    );
 
-}
+};
